@@ -1,0 +1,4 @@
+(executable
+ (public_name testhttp)
+ (name main)
+ (libraries testhttp opium))
