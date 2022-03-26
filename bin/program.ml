@@ -51,7 +51,7 @@ let hello_world _req =
   in
   emit_page r
   |> Response.of_html
-  |> Lwt.return  
+  |> Lwt.return
 
 let main =
   App.empty
