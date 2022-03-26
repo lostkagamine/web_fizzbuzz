@@ -20,10 +20,10 @@ let fizzbuzz_web req =
     int_of_string (Router.param req "count")
   in
   let r =
-    fizzbuzz count
+    fizzbuzz count |> List.map txt
   in
   let div =
-    div (r |> List.map (fun x -> span [txt x; br ()]))
+    div (r |> List.map (fun x -> span [x; br ()]))
   in
   emit_page div
   |> Response.of_html
